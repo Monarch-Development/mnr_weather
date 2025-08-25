@@ -23,8 +23,9 @@ AddStateBagChangeHandler('weather', 'global', function(_, _, weather)
 end)
 
 AddStateBagChangeHandler('wind', 'global', function(_, _, wind)
-    SetWindDirection(wind.direction)
+    SetWindDirection(math.rad(wind.direction))
     SetWindSpeed(wind.speed)
 end)
+
 
 CreateThread(loginSync)
