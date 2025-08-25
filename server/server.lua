@@ -62,7 +62,7 @@ function world:UpdateWind()
         return
     end
 
-    local direction = math.random(0.0, 360.0)
+    local direction = math.random(0.0, 359.0)
     local force = math.random(1.0, 12.0)
 
     GlobalState.wind = { direction = direction, force = force }
@@ -93,4 +93,5 @@ end
 CreateThread(function()
     world:Init()
     world:Loop()
+
 end)
